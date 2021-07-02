@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day2 Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Information Form</h1>
+        <form method="POST" action="">
+            <table>
+                <tr>
+                    <td><label>Full Name </label> &nbsp;</td>
+                    <td><input type="text" id="fname" placeholder="Enter your name" /></td>
+                </tr>
+                <tr>
+                    <td><br><br><label>Secret Pin </label></td>
+                    <td><br><br><input type="password" id="pwd" placeholder="Enter your secret pin" /></td>
+                </tr>
+                <tr>
+                    <td><br><br><label>Gender </label></td>
+                    <td>
+                        <br><br>
+                        <input type="radio" name="gender" id="gender-male" value="Male" onclick="radioCheck()" />  <label>Male</label> &nbsp;
+                        <input type="radio" name="gender" id="gender-female" value="Female" onclick="radioCheck()" />  <label>Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br><br><label>I am an expert in </label></td>
+                    <td>
+                        <br><br>
+                        <input type="checkbox" id="check-html" value="HTML" />  <label>HTML</label> &nbsp;
+                        <input type="checkbox" id="check-css" value="CSS" />  <label>CSS</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br><br><label>My field of study is </label></td>
+                    <td>
+                        <br><br>
+                        <select id="drop-down">
+                            <option>Select your branch using this select drop-down</option>
+                            <option value="cse">Computer Science and Engineering</option>
+                            <option value="ece">Electronics and Communication Engineering</option>
+                            <option value="civ">Civil Engineering</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br><br><label>Tell more about yourself </label></td>
+                    <td><br><br><textarea rows="5" id="text-area" placeholder="This is textarea. Enter your description"></textarea></td>
+                </tr>
+                <tr>
+                    <td><br><br><input type="submit" value="Submit Form" id="submit" onclick="checkFname()" /></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function checkFname() {
+                let name = document.getElementById("fname").value;
+                if(name.length>1) {
+                    alert("Hello "+name);
+                }
+                else {
+                    alert("Full Name is missing");
+                }
+            }
+            function radioCheck() {
+                if(document.getElementById("gender-male").checked) {
+                    alert("You selected gender: "+document.getElementById("gender-male").value);
+                }
+                else if(document.getElementById("gender-female").checked) {
+                    alert("You selected gender: "+document.getElementById("gender-female").value);
+                }
+            }
+        </script>
+    </body>
+</html>
