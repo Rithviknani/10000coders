@@ -1,0 +1,25 @@
+input[type=text], input[type=password], select, textarea{
+    width: 150%;
+    padding: 5px;
+}
+table, tr, td {
+    text-align: left;
+}
+table {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+}
+#submit {
+    background: blue;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 16px 10px 16px;
+}
+#submit:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+h1 {
+    text-align: center;
+}
