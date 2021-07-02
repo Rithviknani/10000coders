@@ -16,7 +16,7 @@ table {
     color: white;
     padding: 10px 16px 10px 16px;
 }
-#submit:hover {
+input[type=submit]:hover {
     cursor: pointer;
     opacity: 0.9;
 }
